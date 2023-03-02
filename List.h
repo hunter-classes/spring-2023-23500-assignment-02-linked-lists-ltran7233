@@ -13,22 +13,10 @@ class List{
 
   std::string toString(); // for testing purposes
 
-  /*
-    Try to complete for Monday:
-    
-    get()
-    and think about the remove and 
-    other insert routine
-    
-    -------------------
-    ~List();
-    
+  bool contains(std::string item);
   void remove(int loc);
-  std::string get(int loc);
-  bool contains();
-  int length(); // the # of elements
-  */
-  
-  
+  ~List();
+
+  // std::string get(int loc);
 
 };

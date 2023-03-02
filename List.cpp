@@ -87,3 +87,46 @@ std::string List::toString(){
   result = result + "nullptr";
   return result;
 }
+
+bool List::contains(std::string item){
+  Node *walker = this->head;
+  while(walker != nullptr){
+    if(walker->getData() == item){
+      return true;
+    }
+    walker = walker->getNext();
+  }
+  return false;
+}
+
+void List::remove(int loc){
+  Node *walker, *trailer;
+  walker = this->head; // start of the list
+  trailer = nullptr; // one behind
+  
+  while(loc>0 && walker != nullptr){
+       loc--;
+       /* trailer will always be one node
+       behind walker */
+       trailer = walker;
+       walker = walker->getNext();
+  }
+
+  // test to see if we're trying to insert past the end 
+  if (walker == nullptr){
+    throw std::out_of_range("Index out of bounds!");
+  }
+
+  if (trailer == nullptr){ // removing at 0
+    head = walker->getNext();
+  } 
+  else{
+    trailer->setNext(walker->getNext());
+  }
+  delete walker;
+}
+
+List::~List(){ 
+// deletes each head from List
+	delete head;
+}
