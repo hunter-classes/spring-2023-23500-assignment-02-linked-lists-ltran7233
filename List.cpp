@@ -119,11 +119,12 @@ void List::remove(int loc){
 
   if (trailer == nullptr){ // removing at 0
     head = walker->getNext();
+    delete walker;
   } 
   else{
     trailer->setNext(walker->getNext());
+    delete walker;
   }
-  delete walker;
 }
 
 List::~List(){ 
