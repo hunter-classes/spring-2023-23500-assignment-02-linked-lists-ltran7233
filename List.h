@@ -17,6 +17,6 @@ class List{
   void remove(int loc);
   ~List();
 
-  // std::string get(int loc);
+  // std::string get(int loc); // similar to contains
 
 };

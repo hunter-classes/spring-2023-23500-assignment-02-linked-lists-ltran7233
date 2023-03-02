@@ -6,6 +6,17 @@ List::List(){
   head = nullptr;
 }
 
+List::~List(){
+	std::cerr << "Calling the destructor";
+    Node *walker = head;
+    Node *trailer = nullptr;
+    while (walker != nullptr){
+      trailer = walker;
+      walker = walker->getNext();
+      delete trailer;
+    }
+}
+
 // insert at the "front" (head)
 void List::insert(std::string data){
   Node *tmp = new Node(data);
@@ -125,9 +136,4 @@ void List::remove(int loc){
     trailer->setNext(walker->getNext());
     delete walker;
   }
-}
-
-List::~List(){ 
-// deletes each head from list
-	delete head;
 }
