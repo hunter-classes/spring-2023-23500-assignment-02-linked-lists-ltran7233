@@ -7,6 +7,9 @@ int main()
   std::cout << l->toString() << " " << l->length() << "\n";
   l->insert(0,"a");
   std::cout << l->toString() << " " << l->length() << "\n";
+  l->remove(0);
+  std::cout << l->toString() << " " << l->length() << "\n";
+  std::cout << l->toString() << " " << l->contains("a") << "\n";
   l->insert(0,"b");
   l->insert(0,"c");
   l->insert(0,"d");
