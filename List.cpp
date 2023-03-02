@@ -112,7 +112,7 @@ void List::remove(int loc){
        walker = walker->getNext();
   }
 
-  // test to see if we're trying to insert past the end 
+  // test to see if we're trying to remove past the end 
   if (walker == nullptr){
     throw std::out_of_range("Index out of bounds!");
   }
@@ -127,6 +127,6 @@ void List::remove(int loc){
 }
 
 List::~List(){ 
-// deletes each head from List
+// deletes each head from list
 	delete head;
 }
