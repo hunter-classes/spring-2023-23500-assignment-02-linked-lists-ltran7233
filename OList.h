@@ -10,13 +10,13 @@ class OList{
   void insert(std::string data);
   void insert(int loc, std::string data); //0 indexed
   int length();
-  std::string OList::find(std::string data);
+  std::string find(std::string data);
 
   std::string toString(); // for testing purposes
 
   bool contains(std::string item);
-  std::string OList::get(int loc);
-  void OList::reverse();
+  std::string get(int loc);
+  void reverse();
   void remove(int loc);
   ~OList();
 };
