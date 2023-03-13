@@ -1,4 +1,4 @@
-OBJECTS=OList.o List.o main.o Node.o
+OBJECTS=OList.o List.o main.o Node.o tests.o
 CXXFLAGS=-g
 
 main: $(OBJECTS)
